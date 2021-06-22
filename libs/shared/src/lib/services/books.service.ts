@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 
 import { Book } from '../models/book.model';
 
@@ -21,6 +21,11 @@ export class BooksService {
 
     return this.httpClient
       .get<Book[]>(BOOKS_API_URL + searchString, httpOptions)
-      .pipe(map((response) => response['items']));
+      .pipe(
+        map((response) => response['items']),
+        catchError((error) => {
+          throw error;
+        })
+      );
   }
 }

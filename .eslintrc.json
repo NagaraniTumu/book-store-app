@@ -25,7 +25,8 @@
       "files": ["*.ts", "*.tsx"],
       "extends": ["plugin:@nrwl/nx/typescript"],
       "rules": {
-        "@typescript-eslint/no-var-requires": 0
+        "@typescript-eslint/no-var-requires": 0,
+        "@typescript-eslint/no-explicit-any": "off"
       }
     },
     {
