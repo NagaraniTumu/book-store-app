@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "defaultProject": "book-store",
+  "schematics": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
+  "projects": {
+    "book-store": {
+      "projectType": "application",
+      "root": "apps/book-store",
+      "sourceRoot": "apps/book-store/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/book-store",
+            "index": "apps/book-store/src/index.html",
+            "main": "apps/book-store/src/main.ts",
+            "polyfills": "apps/book-store/src/polyfills.ts",
+            "tsConfig": "apps/book-store/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/book-store/src/favicon.ico",
+              "apps/book-store/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/book-store/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/book-store/src/environments/environment.ts",
+                  "with": "apps/book-store/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "book-store:build:production"
+            },
+            "development": {
+              "browserTarget": "book-store:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "book-store:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/book-store/src/**/*.ts",
+              "apps/book-store/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/book-store"],
+          "options": {
+            "jestConfig": "apps/book-store/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "book-store-e2e": {
+      "root": "apps/book-store-e2e",
+      "sourceRoot": "apps/book-store-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/book-store-e2e/cypress.json",
+            "tsConfig": "apps/book-store-e2e/tsconfig.e2e.json",
+            "devServerTarget": "book-store:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "book-store:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/book-store-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },   
+    "shared": {
+      "projectType": "library",
+      "root": "libs/shared",
+      "sourceRoot": "libs/shared/src",
+      "prefix": "app",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared"],
+          "options": {
+            "jestConfig": "libs/shared/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/src/**/*.ts",
+              "libs/shared/src/**/*.html"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

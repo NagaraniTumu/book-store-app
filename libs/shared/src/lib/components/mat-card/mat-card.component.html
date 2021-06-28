@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title [title]="book?.title">{{book?.title}}</mat-card-title>
+        <mat-card-subtitle [title]="book?.subtitle">{{book?.subtitle}}</mat-card-subtitle>
+        <div class="image-container">
+            <img mat-card-image
+                src="{{book?.imageSrc}}"
+                alt="{{book?.subtitle}}">
+        </div>
+    </mat-card-header>
+
+    <mat-card-content>
+        <p *ngIf="book?.description">{{ book.description | ellipsis }}</p>
+    </mat-card-content>
+
+    <mat-card-footer *ngIf="book?.authors">
+        <span class="author-heading">Written by:</span><br>
+        <span>{{book.authors | arrayToString}}</span>
+    </mat-card-footer>
+</mat-card>

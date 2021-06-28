@@ -1,0 +1,26 @@
+<form class="books-search-form">
+    <mat-form-field>
+        <input matInput
+            name="search"
+            [placeholder]="placeholder"
+            [(ngModel)]="searchValue">
+    </mat-form-field>
+    <button mat-button [disabled]="!searchValue" (click)="onSearch()">
+        <mat-icon>search</mat-icon>
+    </button>
+</form>
+
+<div fxLayout="row wrap">
+    <div fxFlex="50" class="flex-card" *ngFor="let book of books">
+        <app-mat-card
+            [book]="{
+            title: book.volumeInfo.title,
+            subtitle: book.volumeInfo.subtitle,
+            imageSrc: (book.volumeInfo.imageLinks ?
+            book.volumeInfo.imageLinks.smallThumbnail : ''),
+            description: book.volumeInfo.description,
+            authors: book.volumeInfo.authors
+            }">
+        </app-mat-card>
+    </div>
+</div>

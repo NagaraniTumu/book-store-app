@@ -1,0 +1,45 @@
+.mat-card {
+  width: 520px;
+  height: 210px;
+  padding: 10px;
+  display: inline-block;
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin: 15px;
+
+  .mat-card-header {
+    height: 95px;
+    .mat-card-title,
+    .mat-card-subtitle {
+      width: 415px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: left;
+    }
+
+    .image-container {
+      text-align: right;
+      margin: 16px 16px 0;
+
+      .mat-card-image {
+        width: 60px;
+        min-width: 60px;
+        min-height: 60px;
+      }
+    }
+  }
+
+  .mat-card-content {
+    text-align: left;
+    margin: 0px 16px;
+  }
+
+  .mat-card-footer {
+    margin: 16px;
+    text-align: left;
+    .author-heading {
+      font-weight: bold;
+    }
+  }
+}
