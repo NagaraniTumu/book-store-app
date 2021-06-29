@@ -1,0 +1,70 @@
+.cart-container {
+  margin-bottom: 10px;
+  display: flow-root;
+  .mat-card {
+    width: 900px;
+    height: 210px;
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 10px;
+
+    .mat-card-header {
+      height: 90px;
+      .mat-card-title,
+      .mat-card-subtitle {
+        width: 785px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
+      }
+
+      .image-container {
+        text-align: right;
+        margin: 16px 16px 0;
+
+        .mat-card-image {
+          width: 60px;
+          min-width: 60px;
+          min-height: 60px;
+        }
+      }
+    }
+
+    .mat-card-content {
+      text-align: left;
+      margin: 0px 16px;
+    }
+
+    .mat-card-footer {
+      margin: 16px;
+      display: flex;
+
+      .author-list {
+        width: 50%;
+        text-align: left;
+        .author-heading {
+          font-weight: bold;
+        }
+      }
+      .remove-cart-item {
+        width: 50%;
+        text-align: right;
+        padding-top: 10px;
+        color: palevioletred;
+      }
+    }
+  }
+
+  .cart-actions {
+    .mat-button {
+      color: white;
+      background-color: mediumvioletred;
+      border-radius: 8px;
+      width: 160px;
+      margin-top: 2px;
+    }
+  }
+}

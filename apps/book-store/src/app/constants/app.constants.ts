@@ -7,3 +7,12 @@ export const SIDE_NAV_LIST_ITEMS = {
 };
 
 export const SEARCH_INPUT_PLACEHOLDER = 'Search in Library';
+
+export const ROUTES = {
+  BOOKS_SEARCH: '/books-search',
+  BOOK_DETAIL: './book-detail',
+  CART: './cart',
+  COLLECTION: './my-book-collection',
+  CART_BILLING: './cart/billing-info',
+  DETAIL_BILLING: './book-detail/billing-info',
+};

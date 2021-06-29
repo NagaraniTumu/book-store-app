@@ -1,1 +1,41 @@
-<p>collection works!</p>
+<div class="cart-container" fxLayout="row wrap" *ngIf="collectionBooks.length">
+    <div fxFlex="50" class="flex-card"
+        *ngFor="let collection of collectionBooks">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>{{collection?.bookInfo?.title}}</mat-card-title>
+                <mat-card-subtitle>{{collection?.bookInfo?.subtitle}}</mat-card-subtitle>
+                <div class="image-container">
+                    <img mat-card-image
+                        src="{{collection?.bookInfo?.thumbnail}}"
+                        alt="{{collection?.bookInfo?.subtitle}}">
+                </div>
+            </mat-card-header>
+
+            <mat-card-content>
+                <p *ngIf="collection?.bookInfo?.description">{{
+                    collection.bookInfo.description | ellipsis:200 }}</p>
+            </mat-card-content>
+
+            <mat-card-footer *ngIf="collection?.bookInfo?.authors">
+                <div class='author-list'>
+                    <span class="label-heading">{{labels.WrittenBy}}:</span><br>
+                    <span>{{collection.bookInfo.authors | arrayToString}}</span>
+                </div>
+                <div class='billing-info'>
+                    <span class="label-heading">{{labels.BillingAddress}}</span><br>
+                    <span class="label-heading">{{labels.Name}}: </span>
+                    <span>{{collection?.billingInfo?.fullName}}</span><br>
+
+                    <span class="label-heading">{{labels.Email}}: </span>
+                    <span>{{collection?.billingInfo?.email}}</span><br>
+
+                    <span class="label-heading">{{labels.PhoneNumber}}: </span>
+                    <span>{{collection?.billingInfo?.phoneNumber}}</span><br>
+                    <span class="label-heading">{{labels.Address}}: </span>
+                    <span>{{collection?.billingInfo?.address}}</span><br>
+                </div>
+            </mat-card-footer>
+        </mat-card>
+    </div>
+</div>

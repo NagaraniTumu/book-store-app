@@ -1,0 +1,72 @@
+<div class="billing-info-container">
+    <div class="row">
+        <div class="col-3">
+            <img class="billing-image" src="../../assets/images/billing.png">
+        </div>
+
+        <div class="col">
+            <h2>{{pageTitle.BillingDetails}}</h2>
+
+            <form [formGroup]="billingInfoForm" (ngSubmit)="onSubmit()">
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Your name"
+                        formControlName="fullName" required>
+
+                    <mat-error *ngFor="let validation of
+                        validationMsgs.FullName">
+                        <mat-error class="error-message"
+                            *ngIf="billingInfoForm.hasError(validation.type,
+                            'fullName')">
+                            {{validation.message}}
+                        </mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput type="email" placeholder="Your email"
+                        formControlName="email" required>
+
+                    <mat-error *ngFor="let validation of
+                        validationMsgs.Email">
+                        <mat-error class="error-message"
+                            *ngIf="billingInfoForm.hasError(validation.type,
+                            'email')">
+                            {{validation.message}}
+                        </mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput type="phoneNumber" placeholder="Your phone
+                        number" formControlName="phoneNumber" required>
+                    <mat-error *ngFor="let validation of
+                        validationMsgs.PhoneNumber">
+                        <mat-error class="error-message"
+                            *ngIf="billingInfoForm.hasError(validation.type,
+                            'phoneNumber')">
+                            {{validation.message}}
+                        </mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <textarea matInput type="address" placeholder="Your address"
+                        formControlName="address" required></textarea>
+                    <mat-error class="error-message"
+                        *ngIf="billingInfoForm.hasError(validationMsgs.Address.type,
+                        'address')">
+                        {{validationMsgs.Address.message}}
+                    </mat-error>
+                </mat-form-field>
+
+                <button mat-raised-button
+                    class="btnSubmit"
+                    color="primary"
+                    type="submit"
+                    [disabled]="!billingInfoForm.valid">
+                    {{buttons.Submit}}
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
