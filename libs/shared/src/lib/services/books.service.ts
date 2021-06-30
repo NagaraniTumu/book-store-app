@@ -16,7 +16,7 @@ export class BooksService {
   public recentSearchResults$ = new BehaviorSubject<Book[]>([]);
   public selectedBook$ = new BehaviorSubject<Book>(null);
   public cartBooks$ = new BehaviorSubject<Book[]>([]);
-  public myBookCollecton$ = new BehaviorSubject<Collection[]>([]);
+  public myBookCollection$ = new BehaviorSubject<Collection[]>([]);
   public resetCart$ = new Subject<void>();
   public resetCollection$ = new Subject<void>();
 

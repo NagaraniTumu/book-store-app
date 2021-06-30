@@ -7,6 +7,7 @@ import { takeUntil } from 'rxjs/operators';
 import { Book, BooksService } from '@app/shared';
 
 import { ROUTES } from '../constants/app.constants';
+import { BUTTONS } from '../constants/template.constants';
 
 @Component({
   selector: 'app-cart',
@@ -14,6 +15,7 @@ import { ROUTES } from '../constants/app.constants';
   styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent implements OnInit, OnDestroy {
+  public buttons = BUTTONS;
   public cartBooks: Book[];
 
   public unSubscribe$ = new Subject<void>();
