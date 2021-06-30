@@ -1,0 +1,192 @@
+{
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "BHs2DwAAQBAJ",
+      "etag": "7LNwz9n3gOE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/BHs2DwAAQBAJ",
+      "volumeInfo": {
+        "title": "Learning Angular",
+        "subtitle": "A Hands-On Guide to Angular 2 and Angular 4",
+        "authors": ["Brad Dayley", "Brendan Dayley", "Caleb Dayley"],
+        "publisher": "Addison-Wesley Professional",
+        "publishedDate": "2017-09-19",
+        "description": "Second Edition A Hands-On Guide to Angular 2",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780134577029"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0134577027"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "averageRating": 3,
+        "pageCount": 240,
+        "printType": "BOOK",
+        "categories": ["Computers"],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "0.2.1.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=BHs2",
+          "thumbnail": "http://books.google.com/books/content?id=BHs2DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "un",
+        "previewLink": "http://books.google.co.in/books?id=BHs2DwAAQBAJ&printsec=frontcover&dq=angular&hl=&cd=1&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=BHs2DwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=BHs2DwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 2232.93,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 2232.93,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=BHs2DwAAQBAJ&rdid=book-BHs2DwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 2232930000,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 2232930000,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/Learning_Angular-sample-epub.acsm?id=BHs2DwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/Learning_Angular-sample-pdf.acsm?id=BHs2DwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=BHs2DwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Understand how Angular is organized and learn best practices for designing Angular applications Quickly build Angular templates with built-in directives that enhance the user experience Bind UI elements to your data model, so changes to ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "nLkrDwAAQBAJ",
+      "etag": "rLelwBgcGtg",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/nLkrDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Angular Router",
+        "subtitle": "Angular Router",
+        "authors": ["Victor Savkin"],
+        "publisher": "Packt Publishing Ltd",
+        "publishedDate": "2017-03-20",
+        "description": "Angular Router",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781787287150"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1787287157"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "averageRating": 5,
+        "pageCount": 118,
+        "printType": "BOOK",
+        "categories": ["Computers"],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.1.1.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=nLkr",
+          "thumbnail": "http://books.google.com/books/content?id=nLkrDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=nLkrDwAAQBAJ&printsec=frontcover&dq=angular&hl=&cd=2&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=nLkrDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=nLkrDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 2252.61,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 2252.61,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=nLkrDwAAQBAJ&rdid=book-nLkrDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 2252610000,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 2252610000,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=nLkrDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "From Angular core team member and creator of the router About This Book Written by the creator of the Angular router, giving you the best information straight from the source Get full coverage of the entire Angular Router library and ..."
+      }
+    }
+  ]
+}

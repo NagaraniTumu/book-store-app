@@ -55,12 +55,15 @@
             <span class="author-heading">{{labels.WrittenBy}}:</span><br>
             <span>{{selectedBook.authors | arrayToString}}</span>
             <mat-card-actions>
-                <button mat-button
+                <button
+                    mat-button
+                    id="btnAddToCart"
                     color="accent"
                     (click)="onAddToCart(selectedBook)">
                     {{buttons.AddToCart}}
                 </button>
                 <button mat-button
+                    id="btnBuy"
                     color="accent"
                     (click)="onBuy(selectedBook)">
                     {{buttons.Buy}}
