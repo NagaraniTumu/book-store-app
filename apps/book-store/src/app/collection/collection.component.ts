@@ -21,7 +21,7 @@ export class CollectionComponent implements OnInit, OnDestroy {
   constructor(private _booksService: BooksService) {}
 
   ngOnInit(): void {
-    this._booksService.myBookCollection$
+    this._booksService.myBookCollecton$
       .pipe(takeUntil(this.unSubscribe$))
       .subscribe((response: Collection[]) => {
         this.collectionBooks = response;

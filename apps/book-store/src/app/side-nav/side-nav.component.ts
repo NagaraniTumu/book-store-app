@@ -32,7 +32,7 @@ export class SideNavComponent implements OnInit, OnDestroy {
     this._booksService.resetCollection$
       .pipe(takeUntil(this.unSubscribe$))
       .subscribe(() => {
-        this.collectionBooksCount = this._booksService.myBookCollection$.getValue().length;
+        this.collectionBooksCount = this._booksService.myBookCollecton$.getValue().length;
       });
   }
 

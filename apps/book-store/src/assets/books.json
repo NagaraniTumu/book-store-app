@@ -1,43 +1,881 @@
 [
-  {
-    "id": "BHs2DwAAQBAJ",
-    "title": "Learning Angular",
-    "subtitle": "A Hands-On Guide to Angular 2 and Angular 4",
-    "authors": ["Brad Dayley", "Brendan Dayley", "Caleb Dayley"],
-    "publisher": "Addison-Wesley Professional",
-    "description": "Learning Angular, Second Edition A Hands-On Guide to Angular 2 and Angular 4 Learning Angular teaches modern application development with Angular 2 and Angular 4. It begins with the basics of Angular and the technologies and techniques used throughout the book, such as key features of TypeScript, newer ES6 syntax and concepts, and details about the tools needed to write professional Angular applications. The reader will next build an Angular application from scratch while learning about the primary pieces of an Angular application and see how they work together. Using lots of examples, the core parts of Angular will be introduced, such as Components, the Router, and Services. The book also covers techniques like server-side rendering and how to incrementally add Angular 2+ features to existing AngularJS applications. Finally, the reader will gain insight into advanced skills that should be part of any professional Angular developer’s toolkit such as testing, tooling options, and performance tuning. Understand how Angular is organized and learn best practices for designing Angular applications Quickly build Angular templates with built-in directives that enhance the user experience Bind UI elements to your data model, so changes to your model and UI occur automatically in tandem Define custom Angular directives that extend HTML Implement zoomable images, expandable lists, and other rich UI components Implement client-side services that interact with web servers Build dynamic browser views to provide even richer user interaction Create custom services you can easily reuse Implement rich UI components as custom Angular directives Contents at a Glance Introduction What is Angular Why Use Angular Who this Book is For How to Use this Book Getting the Source Code Chapter 1: Jumping into JavaScript Setting Up a JavaScript Development Environment Defining Variables Understanding JavaScript Data Types Using Operators Implementing Looping Creating Functions Understanding Variable Scope Using JavaScript Objects Manipulating Strings Working with Arrays Adding Error Handling Chapter 2: Jumping into TypeScript Learning the Different Types Understanding Interfaces Implementing Classes Implementing Modules Understanding Functions Chapter 3: Getting Started with Angular Why Angular? Understanding Angular Separation of Responsibilities Adding Angular to Your Environment Using the Angular CLI Creating a Basic Angular Application Chapter 4: Angular Components Component Configuration Building the Template Using Constructors Using External Templates Implementing Directives Chapter 5: Expressions Using Expressions Using Pipes Building a Custom Pipe Chapter 6: Data Binding Understanding Data Binding Interpolation Property Binding Attribute Binding Class Binding Style Binding Event Binding Two-Way Binding Chapter 7: Built-in Directives Understanding Directives Using Built-in Directives Structural Directives Attribute Directives Chapter 8: Custom Directives Creating a Custom Attribute Directive Creating a Custom Directive with a Component Chapter 9: Events and Change Detection Using Browser Events Emitting Custom Events Using Observables Chapter 10: Implementing Angular Services in Web Applications Understanding Angular Services Using the Built in Services Sending HTTP GET and PUT Requests with the http Service Implementing a Simple Mock Server Using the http Service Changing Views with the router Service Implementing a Router with a Navigation Bar Implementing a Router with Parameters Chapter 11: Creating Your Own Custom Angular Service Integrating Custom Services into Angular Applications Implementing a Simple Application That Uses a Constant Data Service Implementing a Data Transform Service Implementing a Variable Data Service Implementing a Service that Returns a Promise Implementing a Shared Service Chapter 12: Having Fun with Angular Implementing an Angular Application That Uses the Animation Service Implementing an Angular Application That Zooms in on Images Implementing an Angular Application That Enables Drag and Drop Implementing a Star Rating Angular Component",
-    "thumbnail": "http://books.google.com/books/content?id=BHs2DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-    "pageCount": 240,
-    "language": "un",
-    "price": 2232930000,
-    "currencyCode": "INR",
-    "rating": 3
-  },
-  {
-    "id": "nLkrDwAAQBAJ",
-    "title": "Angular Router",
-    "authors": ["Victor Savkin"],
-    "publisher": "Packt Publishing Ltd",
-    "description": "From Angular core team member and creator of the router About This Book Written by the creator of the Angular router, giving you the best information straight from the source Get full coverage of the entire Angular Router library and understand exactly how every command works Essential for all serious users of Angular who need to manage states within their applications Who This Book Is For To get the most from this book, you should already have a good understanding of Angular and general web development. What You Will Learn Understand the role of the Angular router and how to make the most of it Build and parse complex URLs Learn about the componentless and empty-path routes Take control of states in your application Make use of imperative navigation Understand guards and how they can benefit your applications Optimize configuration and run tests on your routing In Detail Managing state transitions is one of the hardest parts of building applications. This is especially true on the web, where you also need to ensure that the state is reflected in the URL. In addition, you might want to split applications into multiple bundles and load them on demand. Doing this transparently isn't easy. The Angular router solves these problems. Using the router, you can declaratively specify application states, manage state transitions while taking care of the URL, and load bundles on demand. This book is a complete description of the Angular router written by its designer. It goes far beyond a how-to-get-started guide and talks about the library in depth. The mental model, design constraints, and the subtleties of the API-everything is covered. You'll learn in detail how to use the router in your own applications. Predominantly, you'll understand the inner workings of the router and how you can configure it to work with any edge cases you come across in your sites. Throughout the book, you'll see examples from real-world use in the MailApp application. You can view the full source of this application and see how the router code works to manage the state of the application and define what is visible on screen. Reading this book will give you deep insights into why the router works the way it does and will make you an Angular router expert. Style and approach This is an extremely practical book full of code examples and descriptions to help you understand the inner workings of the Angular router.",
-    "thumbnail": "http://books.google.com/books/content?id=nLkrDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-    "pageCount": 118,
-    "language": "en",
-    "price": 2252.61,
-    "currencyCode": "INR",
-    "rating": 5
-  },
-  {
-    "id": "tL6aDAEACAAJ",
-    "title": "Angular 2 in Action",
-    "authors": ["Jeremy Wilken", "David Aden", "Jason Aden"],
-    "publisher": "Manning Publications",
-    "publishedDate": "2018-02",
-    "description": "When developers move beyond building simple web sites or small applications, things get complicated. Managing data gets messy, handling browser incompatibilities takes time, juggling competing user interactions and integrating the work of multiple developers gets tricky. The Angular framework handles these common problems, making it ideal for writing large-scale web applications that can be maintained, extended, and tested. Because it's popular, it offers a well-supported code base, vibrant community, and rich ecosystem. Best of all, Angular emphasizes performance and focuses on mobile apps by being compact and memory efficient. Angular in Action teaches readers modern application development with Angular. It begins with the basics, such as key features of TypeScript, newer ES6 syntax and concepts, and details about the tools needed to write professional Angular applications. Next, readers learn how to build an Angular application from scratch. Using many examples, the book teaches the core parts of Angular, such as Components, the Router, and Services. It also covers techniques like server-side rendering and incrementally adding Angular to existing Angular applications. Finally, if offers insight into advanced skills, such as testing, tooling options, and performance tuning. Purchase of the print book includes a free eBook in PDF, Kindle, and ePub formats from Manning Publications.",
-    "smallThumbnail": "http://books.google.com/books/content?id=tL6aDAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-    "pageCount": 310,
-    "language": "un",
-    "price": 2252.61,
-    "currencyCode": "INR",
-    "rating": 4
-  }
-]
+    {
+      "kind": "books#volume",
+      "id": "BHs2DwAAQBAJ",
+      "etag": "7LNwz9n3gOE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/BHs2DwAAQBAJ",
+      "volumeInfo": {
+        "title": "Learning Angular",
+        "subtitle": "A Hands-On Guide to Angular 2 and Angular 4",
+        "authors": [
+          "Brad Dayley",
+          "Brendan Dayley",
+          "Caleb Dayley"
+        ],
+        "publisher": "Addison-Wesley Professional",
+        "publishedDate": "2017-09-19",
+        "description": "Learning Angular, Second Edition A Hands-On Guide to Angular 2 and Angular 4 Learning Angular teaches modern application development with Angular 2 and Angular 4. It begins with the basics of Angular and the technologies and techniques used throughout the book, such as key features of TypeScript, newer ES6 syntax and concepts, and details about the tools needed to write professional Angular applications. The reader will next build an Angular application from scratch while learning about the primary pieces of an Angular application and see how they work together. Using lots of examples, the core parts of Angular will be introduced, such as Components, the Router, and Services. The book also covers techniques like server-side rendering and how to incrementally add Angular 2+ features to existing AngularJS applications. Finally, the reader will gain insight into advanced skills that should be part of any professional Angular developer’s toolkit such as testing, tooling options, and performance tuning. Understand how Angular is organized and learn best practices for designing Angular applications Quickly build Angular templates with built-in directives that enhance the user experience Bind UI elements to your data model, so changes to your model and UI occur automatically in tandem Define custom Angular directives that extend HTML Implement zoomable images, expandable lists, and other rich UI components Implement client-side services that interact with web servers Build dynamic browser views to provide even richer user interaction Create custom services you can easily reuse Implement rich UI components as custom Angular directives Contents at a Glance Introduction What is Angular Why Use Angular Who this Book is For How to Use this Book Getting the Source Code Chapter 1: Jumping into JavaScript Setting Up a JavaScript Development Environment Defining Variables Understanding JavaScript Data Types Using Operators Implementing Looping Creating Functions Understanding Variable Scope Using JavaScript Objects Manipulating Strings Working with Arrays Adding Error Handling Chapter 2: Jumping into TypeScript Learning the Different Types Understanding Interfaces Implementing Classes Implementing Modules Understanding Functions Chapter 3: Getting Started with Angular Why Angular? Understanding Angular Separation of Responsibilities Adding Angular to Your Environment Using the Angular CLI Creating a Basic Angular Application Chapter 4: Angular Components Component Configuration Building the Template Using Constructors Using External Templates Implementing Directives Chapter 5: Expressions Using Expressions Using Pipes Building a Custom Pipe Chapter 6: Data Binding Understanding Data Binding Interpolation Property Binding Attribute Binding Class Binding Style Binding Event Binding Two-Way Binding Chapter 7: Built-in Directives Understanding Directives Using Built-in Directives Structural Directives Attribute Directives Chapter 8: Custom Directives Creating a Custom Attribute Directive Creating a Custom Directive with a Component Chapter 9: Events and Change Detection Using Browser Events Emitting Custom Events Using Observables Chapter 10: Implementing Angular Services in Web Applications Understanding Angular Services Using the Built in Services Sending HTTP GET and PUT Requests with the http Service Implementing a Simple Mock Server Using the http Service Changing Views with the router Service Implementing a Router with a Navigation Bar Implementing a Router with Parameters Chapter 11: Creating Your Own Custom Angular Service Integrating Custom Services into Angular Applications Implementing a Simple Application That Uses a Constant Data Service Implementing a Data Transform Service Implementing a Variable Data Service Implementing a Service that Returns a Promise Implementing a Shared Service Chapter 12: Having Fun with Angular Implementing an Angular Application That Uses the Animation Service Implementing an Angular Application That Zooms in on Images Implementing an Angular Application That Enables Drag and Drop Implementing a Star Rating Angular Component",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780134577029"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0134577027"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 240,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "0.2.1.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=BHs2DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=BHs2DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "un",
+        "previewLink": "http://books.google.co.in/books?id=BHs2DwAAQBAJ&printsec=frontcover&dq=angular&hl=&cd=1&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=BHs2DwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=BHs2DwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 2232.93,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 2232.93,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=BHs2DwAAQBAJ&rdid=book-BHs2DwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 2232930000,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 2232930000,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/Learning_Angular-sample-epub.acsm?id=BHs2DwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/Learning_Angular-sample-pdf.acsm?id=BHs2DwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=BHs2DwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Understand how Angular is organized and learn best practices for designing Angular applications Quickly build Angular templates with built-in directives that enhance the user experience Bind UI elements to your data model, so changes to ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "nLkrDwAAQBAJ",
+      "etag": "rLelwBgcGtg",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/nLkrDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Angular Router",
+        "authors": [
+          "Victor Savkin"
+        ],
+        "publisher": "Packt Publishing Ltd",
+        "publishedDate": "2017-03-20",
+        "description": "From Angular core team member and creator of the router About This Book Written by the creator of the Angular router, giving you the best information straight from the source Get full coverage of the entire Angular Router library and understand exactly how every command works Essential for all serious users of Angular who need to manage states within their applications Who This Book Is For To get the most from this book, you should already have a good understanding of Angular and general web development. What You Will Learn Understand the role of the Angular router and how to make the most of it Build and parse complex URLs Learn about the componentless and empty-path routes Take control of states in your application Make use of imperative navigation Understand guards and how they can benefit your applications Optimize configuration and run tests on your routing In Detail Managing state transitions is one of the hardest parts of building applications. This is especially true on the web, where you also need to ensure that the state is reflected in the URL. In addition, you might want to split applications into multiple bundles and load them on demand. Doing this transparently isn't easy. The Angular router solves these problems. Using the router, you can declaratively specify application states, manage state transitions while taking care of the URL, and load bundles on demand. This book is a complete description of the Angular router written by its designer. It goes far beyond a how-to-get-started guide and talks about the library in depth. The mental model, design constraints, and the subtleties of the API-everything is covered. You'll learn in detail how to use the router in your own applications. Predominantly, you'll understand the inner workings of the router and how you can configure it to work with any edge cases you come across in your sites. Throughout the book, you'll see examples from real-world use in the MailApp application. You can view the full source of this application and see how the router code works to manage the state of the application and define what is visible on screen. Reading this book will give you deep insights into why the router works the way it does and will make you an Angular router expert. Style and approach This is an extremely practical book full of code examples and descriptions to help you understand the inner workings of the Angular router.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781787287150"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1787287157"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 118,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.1.1.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=nLkrDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=nLkrDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=nLkrDwAAQBAJ&printsec=frontcover&dq=angular&hl=&cd=2&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=nLkrDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=nLkrDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 2252.61,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 2252.61,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=nLkrDwAAQBAJ&rdid=book-nLkrDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 2252610000,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 2252610000,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=nLkrDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "From Angular core team member and creator of the router About This Book Written by the creator of the Angular router, giving you the best information straight from the source Get full coverage of the entire Angular Router library and ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "tL6aDAEACAAJ",
+      "etag": "3OA7OhyiFQA",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/tL6aDAEACAAJ",
+      "volumeInfo": {
+        "title": "Angular 2 in Action",
+        "authors": [
+          "Jeremy Wilken",
+          "David Aden",
+          "Jason Aden"
+        ],
+        "publisher": "Manning Publications",
+        "publishedDate": "2018-02",
+        "description": "When developers move beyond building simple web sites or small applications, things get complicated. Managing data gets messy, handling browser incompatibilities takes time, juggling competing user interactions and integrating the work of multiple developers gets tricky. The Angular framework handles these common problems, making it ideal for writing large-scale web applications that can be maintained, extended, and tested. Because it's popular, it offers a well-supported code base, vibrant community, and rich ecosystem. Best of all, Angular emphasizes performance and focuses on mobile apps by being compact and memory efficient. Angular in Action teaches readers modern application development with Angular. It begins with the basics, such as key features of TypeScript, newer ES6 syntax and concepts, and details about the tools needed to write professional Angular applications. Next, readers learn how to build an Angular application from scratch. Using many examples, the book teaches the core parts of Angular, such as Components, the Router, and Services. It also covers techniques like server-side rendering and incrementally adding Angular to existing Angular applications. Finally, if offers insight into advanced skills, such as testing, tooling options, and performance tuning. Purchase of the print book includes a free eBook in PDF, Kindle, and ePub formats from Manning Publications.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1617293318"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781617293313"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 310,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 4,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=tL6aDAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=tL6aDAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "un",
+        "previewLink": "http://books.google.co.in/books?id=tL6aDAEACAAJ&dq=angular&hl=&cd=3&source=gbs_api",
+        "infoLink": "http://books.google.co.in/books?id=tL6aDAEACAAJ&dq=angular&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Angular_2_in_Action.html?hl=&id=tL6aDAEACAAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=tL6aDAEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "About the Book Angular in Action teaches you everything you need to build production-ready Angular applications."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "KSlKtAEACAAJ",
+      "etag": "ZBedEB9uqVE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/KSlKtAEACAAJ",
+      "volumeInfo": {
+        "title": "Learning Angular - Second Edition",
+        "authors": [
+          "Christoffer Noring",
+          "Pablo Deeleman"
+        ],
+        "publishedDate": "2017-12-08",
+        "description": "Build modern SPAs by learning the latest and powerful features of Angular 5 and TypeScript 2.x About This Book The best overview of Angular 5 on the market, this guide gathers together everything there is to know about Angular 5 and groups it into intuitive sections. Learn to build, grow and test powerful and scalable mobile and desktop web applications with Angular Explore the latest features of Angular 5 and TypeScript 2.4 by building a complete responsive application from scratch. Deliver seamless web navigation experiences with application routing and state handling common features with ease The author has done all the hard work of fitting everything Angular 5 means for developers, making this book the quickest way to learn Angular 5 from scratch. Who This Book Is For This book is for web developers who want to build the next generation of state-of-the-art mobile and desktop web applications with Angular. This book does not require you to have prior exposure to either Angular 1.x, 2 or 4, although comprehensive knowledge of JavaScript is assumed. What You Will Learn Set up the workspace and the project using webpack and Angular-Cli Explore the features of TypeScript and organize the code in ES6 modules Work with HTTP and Data Services and understand how data can flow in the app Create multiple views and learn how to navigate between them Make the app beautiful by adding Material Design Implement two different types of form handling and its validation Add animation to some standard events such as route change, initialization, data load, and so on Discover how to bulletproof your applications by introducing smart unit testing techniques and debugging tools In Detail The latest version of Angular comes with a lot of new features that help you to make your applications smaller and faster. This book will show you how to set up an Angular project, and you’ll build Angular components right from the beginning. Moving on, you’ll explore and work with the components to build your app. Next, you’ll find out more about TypeScript and see how to use it to build apps in the best way possible. You’ll then be introduced to the building blocks - Properties, Events, Directives, and Pipes - and how it can be used to implement and enhance the components. Additionally, you’ll be using Angular components to organize your components in a scalable way. Then you’ll understand how to get data in your app and add navigation to it. Furthermore, you’ll deep dive and w...",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1787124924"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781787124929"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 456,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=KSlKtAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=KSlKtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=KSlKtAEACAAJ&dq=angular&hl=&cd=4&source=gbs_api",
+        "infoLink": "http://books.google.co.in/books?id=KSlKtAEACAAJ&dq=angular&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Learning_Angular_Second_Edition.html?hl=&id=KSlKtAEACAAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=KSlKtAEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "By the end of this book, you will be able to scrape websites more efficiently with more accurate data, and how to package, deploy and operate ."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "eNExy_X1YYcC",
+      "etag": "bdRFU8xdrb8",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/eNExy_X1YYcC",
+      "volumeInfo": {
+        "title": "AngularJS",
+        "authors": [
+          "Brad Green",
+          "Shyam Seshadri"
+        ],
+        "publisher": "\"O'Reilly Media, Inc.\"",
+        "publishedDate": "2013-04-08",
+        "description": "Develop smaller, lighter web apps that are simple to create and easy to test, extend, and maintain as they grow. This hands-on guide introduces you to AngularJS, the open source JavaScript framework that uses Model–view–controller (MVC) architecture, data binding, client-side templates, and dependency injection to create a much-needed structure for building web apps. Guided by two engineers who worked on AngularJS at Google, you’ll walk through the framework’s key features, and then build a working AngularJS app—from layout to testing, compiling, and debugging. If you have JavaScript experience, you’ll learn how AngularJS helps reduce the complexity of your web app. Dive deep into Angular’s building blocks and learn how they work together Gain maximum flexibility by separating logic, data, and presentation responsibilities with MVC Assemble your full app in the browser, using client-side templates Use AngularJS directives to extend HTML with declarative syntax Communicate with the server and implement simple caching with the $http service Use dependency injection to improve refactoring, testability, and multiple environment design Get code samples for common problems you face in most web apps",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781449355883"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1449355889"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 196,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 2.5,
+        "ratingsCount": 4,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.2.0.0.preview.1",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=eNExy_X1YYcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=eNExy_X1YYcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=eNExy_X1YYcC&printsec=frontcover&dq=angular&hl=&cd=5&source=gbs_api",
+        "infoLink": "http://books.google.co.in/books?id=eNExy_X1YYcC&dq=angular&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/AngularJS.html?hl=&id=eNExy_X1YYcC"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=eNExy_X1YYcC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This hands-on guide introduces you to AngularJS, the open source JavaScript framework that uses Model–view–controller (MVC) architecture, data binding, client-side templates, and dependency injection to create a much-needed structure ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "CAFeDwAAQBAJ",
+      "etag": "1kRPMoFtukM",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/CAFeDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Angular: Up and Running",
+        "subtitle": "Learning Angular, Step by Step",
+        "authors": [
+          "Shyam Seshadri"
+        ],
+        "publisher": "\"O'Reilly Media, Inc.\"",
+        "publishedDate": "2018-05-31",
+        "description": "This book will demystify Angular as a framework, as well as provide clear instructions and examples on how to get started with writing scalable Angular applications. Angular: Up & Running covers most of the major pieces of Angular, but in a structured manner that is generally used in hands-on training. Each chapter takes one concept, and use examples to cover how it works. Problems to work on (with solutions) at the end of each chapter reinforce the learnings of each chapter and allow readers to really get hands-on with Angular.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781491999844"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1491999845"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 312,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "0.0.1.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=CAFeDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=CAFeDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=CAFeDwAAQBAJ&printsec=frontcover&dq=angular&hl=&cd=6&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=CAFeDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=CAFeDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 2879.2,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 2879.2,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=CAFeDwAAQBAJ&rdid=book-CAFeDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 2879200000,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 2879200000,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=CAFeDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This book will demystify Angular as a framework, as well as provide clear instructions and examples on how to get started with writing scalable Angular applications."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "Znc5DwAAQBAJ",
+      "etag": "n9ImXmHpv9Y",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/Znc5DwAAQBAJ",
+      "volumeInfo": {
+        "title": "Essential Angular",
+        "authors": [
+          "Victor Savkin",
+          "Jeff Cross"
+        ],
+        "publisher": "Packt Publishing Ltd",
+        "publishedDate": "2017-05-31",
+        "description": "Essential Angular is a concise, complete overview of the key aspects of Angular, written by two Angular core contributors. The book covers the framework's mental model, its API, and the design principles behind it. It is fully up to date with the latest release of Angular. About This Book Written by two Angular core contributors A complete overview of the key aspects of Angular Up to date with the latest Angular release Who This Book Is For To get the most from this book, you should already have a good understanding of Angular and general web development. The book dives quickly into the core Angular systems without stepping through the basics. What You Will Learn Understand why and how to use JIT and AOT compilation in Angular Bootstrap and inject NgModules Learn about the component lifecycle Understand the two phases of Change Detection Visualize and parse the Injector tree Understand advanced Lazy Loading Integrate and run different testing strategies on your code In Detail Essential Angular is a concise, complete overview of the key aspects of Angular, written by two Angular core contributors. The book covers the framework's mental model, its API, and the design principles behind it. This book is fully up to date with the latest release of Angular. Essential Angular gives you a strong foundation in the core Angular technology. It will help you put all the concepts into the right places so you will have a good understanding of why the framework is the way it is. Read this book after you have toyed around with the framework, but before you embark on writing your first serious Angular application. This book covers concepts such as the differences between Just-In-Time (JIT) and Ahead-Of-Time (AOT) compilation in Angular, alongside NgModules, components and directives. It also goes into detail on Dependency Injection and Change Detection: essential skills for Angular developers to master. The book finishes with a look at testing, and how to integrate different testing methodologies in your Angular code. Style and approach Essential Angular is a complete overview of the key aspects of the latest release of Angular, written by two core Angular contributors. It goes far beyond a how-to-get-started guide and dives into the most important topics in modern Angular development at depth.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781788291040"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1788291042"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 108,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.1.1.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=Znc5DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=Znc5DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=Znc5DwAAQBAJ&printsec=frontcover&dq=angular&hl=&cd=7&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=Znc5DwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=Znc5DwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 1930.47,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 1930.47,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=Znc5DwAAQBAJ&rdid=book-Znc5DwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 1930470000,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 1930470000,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=Znc5DwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "The book covers the framework&#39;s mental model, its API, and the design principles behind it. This book is fully up to date with the latest release of Angular. Essential Angular gives you a strong foundation in the core Angular technology."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "WFQLDgAAQBAJ",
+      "etag": "KGASDlpm3Sc",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/WFQLDgAAQBAJ",
+      "volumeInfo": {
+        "title": "Pro Angular",
+        "authors": [
+          "Adam Freeman"
+        ],
+        "publisher": "Apress",
+        "publishedDate": "2017-01-24",
+        "description": "Angular 5 updates for this book are now available. Follow the Download source code link for this book on the Apress website. Get the most from Angular 2, the leading framework for building dynamic JavaScript applications. Best-selling author Adam Freeman begins by describing the MVC pattern and the benefits it can offer and then shows you how to use Angular in your projects, starting from the nuts-and-bolts and building up to the most advanced and sophisticated features, going in-depth to give you the knowledge you need. Each topic is covered clearly and concisely and is packed with the details you need to learn to be truly effective. The most important features are given a no-nonsense in-depth treatment and chapters include common problems and details of how to avoid them. What you’ll learn Gain a solid architectural understanding of the MVC Pattern Learn how to create rich and dynamic web app clients using Angular 2 Learn how to extend and customize Angular 2 Learn how to test your Angular 2 projects Who this book is for Web developers with a foundation knowledge of HTML and JavaScript who want to create rich client-side applications.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781484223079"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1484223071"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 778,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "2.6.4.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=WFQLDgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=WFQLDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=WFQLDgAAQBAJ&printsec=frontcover&dq=angular&hl=&cd=8&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=WFQLDgAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=WFQLDgAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 3363,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 3363,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=WFQLDgAAQBAJ&rdid=book-WFQLDgAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 3363000000,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 3363000000,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/Pro_Angular-sample-epub.acsm?id=WFQLDgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/Pro_Angular-sample-pdf.acsm?id=WFQLDgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=WFQLDgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Angular 5 updates for this book are now available. Follow the Download source code link for this book on the Apress website. Get the most from Angular 2, the leading framework for building dynamic JavaScript applications."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "0BSOg0oHhZ0C",
+      "etag": "IWTG+TovCSM",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/0BSOg0oHhZ0C",
+      "volumeInfo": {
+        "title": "Angular Momentum in Quantum Mechanics",
+        "authors": [
+          "A. R. Edmonds"
+        ],
+        "publisher": "Princeton University Press",
+        "publishedDate": "1996",
+        "description": "This book offers a concise introduction to the angular momentum, one of the most fundamental quantities in all of quantum mechanics. Beginning with the quantization of angular momentum, spin angular momentum, and the orbital angular momentum, the author goes on to discuss the Clebsch-Gordan coefficients for a two-component system. After developing the necessary mathematics, specifically spherical tensors and tensor operators, the author then investigates the 3-j, 6-j, and 9-j symbols. Throughout, the author provides practical applications to atomic, molecular, and nuclear physics. These include partial-wave expansions, the emission and absorption of particles, the proton and electron quadrupole moment, matrix element calculation in practice, and the properties of the symmetrical top molecule.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0691025894"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780691025896"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 146,
+        "printType": "BOOK",
+        "categories": [
+          "Science"
+        ],
+        "averageRating": 4,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "2.1.2.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=0BSOg0oHhZ0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=0BSOg0oHhZ0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=0BSOg0oHhZ0C&pg=PA31&dq=angular&hl=&cd=9&source=gbs_api",
+        "infoLink": "http://books.google.co.in/books?id=0BSOg0oHhZ0C&dq=angular&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Angular_Momentum_in_Quantum_Mechanics.html?hl=&id=0BSOg0oHhZ0C"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/Angular_Momentum_in_Quantum_Mechanics-sample-pdf.acsm?id=0BSOg0oHhZ0C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=0BSOg0oHhZ0C&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "The Addition of \u003cb\u003eAngular\u003c/b\u003e Momenta DISCUSSION OF A CLASSICAL MODEL . The \u003cbr\u003e\ntotal \u003cb\u003eangular\u003c/b\u003e momentum of a classical mechanical system composed of two parts \u003cbr\u003e\n, each having an \u003cb\u003eangular\u003c/b\u003e momentum whose magnitude and direction are well&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "XDNyDwAAQBAJ",
+      "etag": "HwXKxnPWyuY",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/XDNyDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Pro Angular 6",
+        "authors": [
+          "Adam Freeman"
+        ],
+        "publisher": "Apress",
+        "publishedDate": "2018-10-10",
+        "description": "Best-selling author Adam Freeman shows you how to use Angular in your projects, starting from the nuts and bolts and building up to the most advanced and sophisticated features, going in-depth to give you the knowledge you need. Chapters include common problems and how to avoid them. Additionally, this book now has accompanying online files for Angular 7; all examples in the book work without changes in Angular 7. Get the most from Angular, the leading framework for building dynamic JavaScript applications. Understand the MVC pattern and the benefits it can offer. What You’ll Learn Gain a solid architectural understanding of the MVC Pattern Create rich and dynamic web app clients using Angular Use the ng tools to create and build an Angular project Extend and customize Angular Test your Angular projects What's New in This Edition Revised for the features and changes in Angular 6 and 7 Covers @angular/cli, ng command line tools, and WebPack Includes HttpClient for simplified asynchronous HTTP requests Presents updates to pipes and localized text display Who This Book Is For Web developers with a foundation knowledge of HTML and JavaScript who want to create rich client-side applications",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781484236499"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1484236491"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 776,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=XDNyDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=XDNyDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=XDNyDwAAQBAJ&printsec=frontcover&dq=angular&hl=&cd=10&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=XDNyDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=XDNyDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 4200.8,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 4200.8,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=XDNyDwAAQBAJ&rdid=book-XDNyDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 4200800000,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 4200800000,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/Pro_Angular_6-sample-epub.acsm?id=XDNyDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/Pro_Angular_6-sample-pdf.acsm?id=XDNyDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=XDNyDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Chapters include common problems and how to avoid them. Additionally, this book now has accompanying online files for Angular 7; all examples in the book work without changes in Angular 7."
+      }
+    }
+  ]

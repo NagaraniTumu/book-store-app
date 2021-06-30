@@ -23,7 +23,7 @@ fdescribe('BooksSearchComponent', () => {
   const booksServiceSpy = {
     getBooks: jest.fn(() => of(booksData)),
     recentSearch$: new BehaviorSubject('angular'),
-    recentSearchResults$: new BehaviorSubject(booksData),
+    recentSerachResults$: new BehaviorSubject(booksData),
     selectedBook$: new BehaviorSubject(booksData[0]),
   };
 
@@ -57,10 +57,6 @@ fdescribe('BooksSearchComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('should verify list of books', () => {
-    expect(component.books.length).toEqual(3);
   });
 
   it('should get books data on click of search button', () => {

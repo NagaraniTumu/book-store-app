@@ -1,6 +1,5 @@
 <div class="cart-container" fxLayout="row wrap" *ngIf="cartBooks.length">
-    <div fxFlex="50" class="flex-card" *ngFor="let book of cartBooks;let
-        i=index">
+    <div fxFlex="50" class="flex-card" *ngFor="let book of cartBooks">
         <mat-card>
             <mat-card-header>
                 <mat-card-title>{{book?.title}}</mat-card-title>
@@ -23,21 +22,14 @@
                     <span>{{book.authors | arrayToString}}</span>
                 </div>
                 <div class="remove-cart-item">
-                    <mat-icon
-                        id="{{'btnRemove-'+i}}"
-                        (click)="onCartRemove(book)">
-                        remove_shopping_cart
-                    </mat-icon>
+                    <mat-icon (click)="onCartRemove(book)">remove_shopping_cart</mat-icon>
                 </div>
             </mat-card-footer>
         </mat-card>
     </div>
     <div class="cart-actions">
-        <button mat-button
-            id="btnPurchase"
-            color="accent"
-            (click)="onProceedToPurchase()">
-            {{buttons.ProceedToPurchase}}
+        <button mat-button color="accent" (click)="onProceedToPurchase()">
+            Proceed to purchase
         </button>
     </div>
 </div>

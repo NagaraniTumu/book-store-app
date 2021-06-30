@@ -12,38 +12,24 @@ describe('BooksService', () => {
   let service: BooksService;
   let httpMock: HttpTestingController;
 
-  const rawBooksData = require('../assets/books-raw.json');
-
-  const booksData = [
-    {
-      id: 'BHs2DwAAQBAJ',
-      title: 'Learning Angular',
-      subtitle: 'A Hands-On Guide to Angular 2 and Angular 4',
-      authors: ['Brad Dayley', 'Brendan Dayley', 'Caleb Dayley'],
-      publisher: 'Addison-Wesley Professional',
-      description: 'Second Edition A Hands-On Guide to Angular 2',
-      thumbnail: 'http://books.google.com/books/content?id=BHs2',
-      pageCount: 240,
-      language: 'un',
-      price: 2232.93,
-      currencyCode: 'INR',
-      rating: 3,
-    },
-    {
-      id: 'nLkrDwAAQBAJ',
-      title: 'Angular Router',
-      subtitle: 'Angular Router',
-      authors: ['Victor Savkin'],
-      publisher: 'Packt Publishing Ltd',
-      description: 'Angular Router',
-      thumbnail: 'http://books.google.com/books/content?id=nLkr',
-      pageCount: 118,
-      language: 'en',
-      price: 2252.61,
-      currencyCode: 'INR',
-      rating: 5,
-    },
-  ];
+  const booksData = {
+    items: [
+      {
+        title: 'Learning Angular',
+        subtitle: 'A Hands-On Guide to Angular 2 and Angular 4',
+        description: 'Learning Angular teaches modern application development',
+        imageSrc: 'http://books.google.com/books/content?id=BHs2DwAAQBAJ',
+        authors: ['Brad Dayley', 'Brendan Dayley', 'Caleb Dayley'],
+      },
+      {
+        title: 'Angular Momentum in Quantum Mechanics',
+        subtitle: 'A Hands-On Guide to Angular Momentum',
+        description: 'This book offers an introduction to the angular momentum',
+        imageSrc: 'http://books.google.com/books/content?id=BHs2DwAAQBAJ',
+        authors: ['A. R. Edmonds', 'Caleb Dayley'],
+      },
+    ],
+  };
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -59,28 +45,12 @@ describe('BooksService', () => {
 
   it('should return list of books', () => {
     service.getBooks('angular').subscribe((books) => {
-      expect(books.length).toBe(booksData.length);
-      expect(books).toEqual(booksData);
+      expect(books.length).toBe(booksData.items.length);
+      expect(books).toEqual(booksData['items']);
     });
 
     const request = httpMock.expectOne(`${BOOKS_API_URL}angular`);
     expect(request.request.method).toBe('GET');
-    request.flush(rawBooksData);
-  });
-
-  it('#getData should return an empty object on error', () => {
-    service.getBooks('angular').subscribe(
-      () => {},
-      (error) => {
-        expect(error.status).toEqual(500);
-        expect(error.statusText).toEqual('Internal Server Error');
-      }
-    );
-
-    const testRequest = httpMock.expectOne(`${BOOKS_API_URL}angular`);
-    testRequest.flush('error', {
-      status: 500,
-      statusText: 'Internal Server Error',
-    });
+    request.flush(booksData);
   });
 });

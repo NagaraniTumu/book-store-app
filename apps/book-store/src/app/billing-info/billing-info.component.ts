@@ -107,8 +107,8 @@ export class BillingInfoComponent implements OnInit, OnDestroy {
       });
     });
 
-    this._booksService.myBookCollection$.next([
-      ...this._booksService.myBookCollection$.getValue(),
+    this._booksService.myBookCollecton$.next([
+      ...this._booksService.myBookCollecton$.getValue(),
       ...collection,
     ]);
 
@@ -121,8 +121,8 @@ export class BillingInfoComponent implements OnInit, OnDestroy {
       billingInfo: this.getBillingInfo(),
     };
 
-    this._booksService.myBookCollection$.next([
-      ...this._booksService.myBookCollection$.getValue(),
+    this._booksService.myBookCollecton$.next([
+      ...this._booksService.myBookCollecton$.getValue(),
       ...[collection],
     ]);
 
