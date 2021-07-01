@@ -34,19 +34,20 @@ export class BooksSearchComponent implements OnInit, OnDestroy {
   }
 
   public onSearch() {
-    this._booksService.recentSearch$.next(this.searchValue);
+    this._booksService.dispatchRecentSearch(this.searchValue);
 
     this._booksService
       .getBooks(this.searchValue)
       .pipe(takeUntil(this.unSubscribe$))
       .subscribe((response: Book[]) => {
         this.books = response;
-        this._booksService.recentSearchResults$.next(this.books);
+
+        this._booksService.dispatchRecentSearchResults(this.books);
       });
   }
 
   public onBookSelect(selectedBook: Book) {
-    this._booksService.selectedBook$.next(selectedBook);
+    this._booksService.dispatchSelectedbook(selectedBook);
 
     this._router.navigate([ROUTES.BOOK_DETAIL]);
   }

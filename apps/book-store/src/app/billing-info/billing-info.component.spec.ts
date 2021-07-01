@@ -13,7 +13,7 @@ import {
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 import { BooksService, Collection } from '@app/shared';
 
@@ -35,8 +35,8 @@ describe('BillingInfoComponent', () => {
     selectedBook$: new BehaviorSubject(booksData[0]),
     cartBooks$: new BehaviorSubject([booksData[0], booksData[1]]),
     myBookCollection$: new BehaviorSubject([]),
-    resetCart$: new Subject<void>(),
-    resetCollection$: new Subject<void>(),
+    dispatchBooksToCollection: jest.fn(),
+    dispatchBooksToCart: jest.fn(),
   };
 
   beforeEach(async () => {
