@@ -14,13 +14,13 @@
     <div fxFlex="50" class="flex-card" *ngFor="let book of books">
         <app-mat-card
             [book]="{
-            title: book.volumeInfo.title,
-            subtitle: book.volumeInfo.subtitle,
-            imageSrc: (book.volumeInfo.imageLinks ?
-            book.volumeInfo.imageLinks.smallThumbnail : ''),
-            description: book.volumeInfo.description,
-            authors: book.volumeInfo.authors
-            }">
+            title: book.title,
+            subtitle: book.subtitle,
+            imageSrc: book.thumbnail,
+            description: book.description,
+            authors: book.authors
+            }"
+            (click)="onBookSelect(book)">
         </app-mat-card>
     </div>
 </div>

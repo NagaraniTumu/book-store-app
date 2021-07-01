@@ -1,1 +1,43 @@
-<p>cart works!</p>
+<div class="cart-container" fxLayout="row wrap" *ngIf="cartBooks.length">
+    <div fxFlex="50" class="flex-card" *ngFor="let book of cartBooks;let
+        i=index">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>{{book?.title}}</mat-card-title>
+                <mat-card-subtitle>{{book?.subtitle}}</mat-card-subtitle>
+                <div class="image-container">
+                    <img mat-card-image
+                        src="{{book?.thumbnail}}"
+                        alt="{{book?.subtitle}}">
+                </div>
+            </mat-card-header>
+
+            <mat-card-content>
+                <p *ngIf="book?.description">{{
+                    book.description | ellipsis:300 }}</p>
+            </mat-card-content>
+
+            <mat-card-footer *ngIf="book?.authors">
+                <div class='author-list'>
+                    <span class="author-heading">Written by:</span><br>
+                    <span>{{book.authors | arrayToString}}</span>
+                </div>
+                <div class="remove-cart-item">
+                    <mat-icon
+                        id="{{'btnRemove-'+i}}"
+                        (click)="onCartRemove(book)">
+                        remove_shopping_cart
+                    </mat-icon>
+                </div>
+            </mat-card-footer>
+        </mat-card>
+    </div>
+    <div class="cart-actions">
+        <button mat-button
+            id="btnPurchase"
+            color="accent"
+            (click)="onProceedToPurchase()">
+            {{buttons.ProceedToPurchase}}
+        </button>
+    </div>
+</div>

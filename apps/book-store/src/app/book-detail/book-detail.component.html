@@ -1,0 +1,74 @@
+<div class="book-detail-container" *ngIf="selectedBook">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{selectedBook?.title}}</mat-card-title>
+            <mat-card-subtitle>{{selectedBook?.subtitle}}</mat-card-subtitle>
+            <div class="image-container">
+                <img mat-card-image
+                    src="{{selectedBook?.thumbnail}}"
+                    alt="{{selectedBook?.subtitle}}">
+            </div>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div>
+                <span class="heading">{{labels.Rating}}:</span>
+                <app-star-rating
+                    *ngIf="selectedBook?.rating"
+                    [rating]="selectedBook.rating">
+                </app-star-rating>
+            </div>
+
+            <div>
+                <span class="heading">{{labels.Price}}:</span>
+                <span>
+                    {{
+                    selectedBook?.price ?
+                    (selectedBook?.currencyCode + ' ' +
+                    selectedBook?.price) : ''
+                    }}
+                </span>
+            </div>
+
+            <div>
+                <span class="heading">{{labels.Publisher}}:</span>
+                <span>{{selectedBook?.publisher}}</span>
+            </div>
+
+            <div>
+                <span class="heading">{{labels.PageCount}}:</span>
+                <span>{{selectedBook?.pageCount}}</span>
+            </div>
+
+            <div>
+                <span class="heading">{{labels.Language}}:</span>
+                <span>{{selectedBook?.language}}</span>
+            </div>
+
+            <p class="book-description"
+                *ngIf="selectedBook?.description">
+                {{selectedBook.description | ellipsis:600}}
+            </p>
+        </mat-card-content>
+
+        <mat-card-footer *ngIf="selectedBook?.authors">
+            <span class="author-heading">{{labels.WrittenBy}}:</span><br>
+            <span>{{selectedBook.authors | arrayToString}}</span>
+            <mat-card-actions>
+                <button
+                    mat-button
+                    id="btnAddToCart"
+                    color="accent"
+                    (click)="onAddToCart(selectedBook)">
+                    {{buttons.AddToCart}}
+                </button>
+                <button mat-button
+                    id="btnBuy"
+                    color="accent"
+                    (click)="onBuy(selectedBook)">
+                    {{buttons.Buy}}
+                </button>
+            </mat-card-actions>
+        </mat-card-footer>
+    </mat-card>
+</div>

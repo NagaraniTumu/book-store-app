@@ -1,0 +1,70 @@
+.book-detail-container {
+  display: flex;
+
+  .mat-card {
+    width: 75%;
+    height: 520px;
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 15px;
+
+    .mat-card-header {
+      margin-bottom: 10px;
+
+      .mat-card-title,
+      .mat-card-subtitle {
+        width: 680px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
+      }
+
+      .image-container {
+        text-align: right;
+        margin: 16px 16px 0;
+
+        .mat-card-image {
+          width: 100px;
+          min-width: 100px;
+          min-height: 100px;
+        }
+      }
+    }
+
+    .mat-card-content {
+      text-align: left;
+      margin: 0px 16px;
+
+      .book-description {
+        margin-top: 10px;
+      }
+
+      .heading {
+        font-weight: bold;
+        margin-right: 10px;
+      }
+    }
+
+    .mat-card-footer {
+      margin: 16px;
+      text-align: left;
+      .author-heading {
+        font-weight: bold;
+      }
+
+      .mat-card-actions {
+        margin: 10px 0;
+
+        .mat-button {
+          color: white;
+          background-color: mediumvioletred;
+          border-radius: 8px;
+          width: 120px;
+        }
+      }
+    }
+  }
+}
