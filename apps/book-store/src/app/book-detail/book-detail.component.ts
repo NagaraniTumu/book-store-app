@@ -37,13 +37,13 @@ export class BookDetailComponent implements OnInit, OnDestroy {
 
   public onAddToCart(book: Book) {
     this.addBooksToCart(book);
+
     this._router.navigate([ROUTES.CART]);
   }
 
   public addBooksToCart(book: Book) {
-    const cartBooks = this._booksService.cartBooks$.getValue();
-    this._booksService.cartBooks$.next([...cartBooks, ...[book]]);
-    this._booksService.resetCart$.next();
+    const cartBooks = [...this._booksService.cartBooks$.getValue(), ...[book]];
+    this._booksService.dispatchBooksToCart(cartBooks);
   }
 
   public onBuy(book: Book) {

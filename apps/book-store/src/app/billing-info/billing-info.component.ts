@@ -92,9 +92,6 @@ export class BillingInfoComponent implements OnInit, OnDestroy {
     } else {
       this.addSelectedBookToCollection();
     }
-
-    this._booksService.resetCart$.next();
-    this._booksService.resetCollection$.next();
   }
 
   public addCartBooksToCollection(): void {
@@ -107,12 +104,12 @@ export class BillingInfoComponent implements OnInit, OnDestroy {
       });
     });
 
-    this._booksService.myBookCollection$.next([
+    this._booksService.dispatchBooksToCollection([
       ...this._booksService.myBookCollection$.getValue(),
       ...collection,
     ]);
 
-    this._booksService.cartBooks$.next([]);
+    this._booksService.dispatchBooksToCart([]);
   }
 
   public addSelectedBookToCollection(): void {
@@ -121,7 +118,7 @@ export class BillingInfoComponent implements OnInit, OnDestroy {
       billingInfo: this.getBillingInfo(),
     };
 
-    this._booksService.myBookCollection$.next([
+    this._booksService.dispatchBooksToCollection([
       ...this._booksService.myBookCollection$.getValue(),
       ...[collection],
     ]);
@@ -147,7 +144,7 @@ export class BillingInfoComponent implements OnInit, OnDestroy {
       }
     });
 
-    this._booksService.cartBooks$.next(booksInCart);
+    this._booksService.dispatchBooksToCart(booksInCart);
   }
 
   public openSnackbar() {

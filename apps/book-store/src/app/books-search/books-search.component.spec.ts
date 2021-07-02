@@ -25,6 +25,9 @@ fdescribe('BooksSearchComponent', () => {
     recentSearch$: new BehaviorSubject('angular'),
     recentSearchResults$: new BehaviorSubject(booksData),
     selectedBook$: new BehaviorSubject(booksData[0]),
+    dispatchRecentSearch: jest.fn(),
+    dispatchRecentSearchResults: jest.fn(),
+    dispatchSelectedbook: jest.fn(),
   };
 
   beforeEach(async () => {
