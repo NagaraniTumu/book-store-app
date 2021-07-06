@@ -3,7 +3,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { BooksService, Collection } from '@app/shared';
+import { BooksFacade } from '@app/books';
+import { Collection } from '@app/shared';
 
 import { LABELS } from '../constants/template.constants';
 
@@ -18,10 +19,10 @@ export class CollectionComponent implements OnInit, OnDestroy {
 
   public unSubscribe$ = new Subject<void>();
 
-  constructor(private _booksService: BooksService) {}
+  constructor(private _booksFacade: BooksFacade) {}
 
   ngOnInit(): void {
-    this._booksService.myBookCollection$
+    this._booksFacade.collectionBooks$
       .pipe(takeUntil(this.unSubscribe$))
       .subscribe((response: Collection[]) => {
         this.collectionBooks = response;

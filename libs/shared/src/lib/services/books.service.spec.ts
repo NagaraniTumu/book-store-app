@@ -6,7 +6,7 @@ import {
 
 import { BooksService } from './books.service';
 
-import { BillingInfo, Book, Collection } from '../models/book.model';
+import { Book } from '../models/book.model';
 
 import { BOOKS_API_URL } from '../constants/api.constants';
 
@@ -47,24 +47,6 @@ describe('BooksService', () => {
     },
   ];
 
-  const billingInfo: BillingInfo = {
-    fullName: 'testname',
-    email: 'testname@yopmail.com',
-    phoneNumber: '2345678901',
-    address: 'sample address',
-  };
-
-  const collectionData: Collection[] = [
-    {
-      bookInfo: booksData[0],
-      billingInfo: billingInfo,
-    },
-    {
-      bookInfo: booksData[1],
-      billingInfo: billingInfo,
-    },
-  ];
-
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
@@ -102,40 +84,5 @@ describe('BooksService', () => {
       status: 500,
       statusText: 'Internal Server Error',
     });
-  });
-
-  it('should dispatchRecentSearch method publish recent search value', () => {
-    service.recentSearch$.subscribe((recentSearch: string) => {
-      expect(recentSearch).toEqual('angular');
-    });
-    service.dispatchRecentSearch('angular');
-  });
-
-  it('should dispatchRecentSearch method publish recent search value', () => {
-    service.recentSearchResults$.subscribe((recentSearchResults: Book[]) => {
-      expect(recentSearchResults).toEqual(booksData);
-    });
-    service.dispatchRecentSearchResults(booksData);
-  });
-
-  it('should dispatchSelectedBook method publish the selected book', () => {
-    service.selectedBook$.subscribe((selectedBook: Book) => {
-      expect(selectedBook).toEqual(booksData[0]);
-    });
-    service.dispatchSelectedbook(booksData[0]);
-  });
-
-  it('should dispatchBooksToCart method publish the books to cart', () => {
-    service.cartBooks$.subscribe((cartBooks: Book[]) => {
-      expect(cartBooks).toEqual(booksData);
-    });
-    service.dispatchBooksToCart(booksData);
-  });
-
-  it('should dispatchBooksToCollection method publish the books to collection', () => {
-    service.myBookCollection$.subscribe((collection: Collection[]) => {
-      expect(collection).toEqual(collectionData);
-    });
-    service.dispatchBooksToCollection(collectionData);
   });
 });

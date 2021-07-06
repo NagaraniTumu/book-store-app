@@ -3,9 +3,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-import { BehaviorSubject } from 'rxjs';
+import { of } from 'rxjs';
 
-import { BooksService } from '@app/shared';
+import { BooksFacade } from '@app/books';
 
 import { SideNavComponent } from './side-nav.component';
 
@@ -15,9 +15,9 @@ describe('SideNavComponent', () => {
 
   const booksData = require('../../assets/books.json');
 
-  const booksServiceSpy = {
-    cartBooks$: new BehaviorSubject([]),
-    myBookCollection$: new BehaviorSubject([]),
+  const booksFacadeSpy = {
+    cartBooks$: of([booksData[0]]),
+    collectionBooks$: of([booksData[1], booksData[2]]),
   };
 
   beforeEach(async () => {
@@ -27,8 +27,8 @@ describe('SideNavComponent', () => {
       imports: [HttpClientTestingModule, RouterTestingModule.withRoutes([])],
       providers: [
         {
-          provide: BooksService,
-          useValue: booksServiceSpy,
+          provide: BooksFacade,
+          useValue: booksFacadeSpy,
         },
       ],
     }).compileComponents();
@@ -52,14 +52,10 @@ describe('SideNavComponent', () => {
   });
 
   it('should verify books count in cart', () => {
-    booksServiceSpy.cartBooks$.next([booksData[0]]);
-
     expect(component.cartBooksCount).toEqual(1);
   });
 
   it('should verify books count in collection', () => {
-    booksServiceSpy.myBookCollection$.next([booksData[1], booksData[2]]);
-
     expect(component.collectionBooksCount).toEqual(2);
   });
 });

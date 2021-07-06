@@ -203,6 +203,31 @@
           }
         }
       }
+    },
+    "books": {
+      "projectType": "library",
+      "root": "libs/books",
+      "sourceRoot": "libs/books/src",
+      "prefix": "app",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/books"],
+          "options": {
+            "jestConfig": "libs/books/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/books/src/**/*.ts",
+              "libs/books/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   }
 }

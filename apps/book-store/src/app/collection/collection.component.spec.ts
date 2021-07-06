@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-import { BehaviorSubject } from 'rxjs';
+import { of } from 'rxjs';
 
-import { BooksService } from '@app/shared';
+import { BooksFacade } from '@app/books';
 
 import { CollectionComponent } from './collection.component';
 
@@ -15,8 +15,8 @@ describe('CollectionComponent', () => {
   let fixture: ComponentFixture<CollectionComponent>;
 
   const booksData = require('../../assets/books.json');
-  const booksServiceSpy = {
-    myBookCollection$: new BehaviorSubject([booksData[0], booksData[1]]),
+  const booksFacadeSpy = {
+    collectionBooks$: of([booksData[0], booksData[1]]),
   };
 
   beforeEach(async () => {
@@ -26,8 +26,8 @@ describe('CollectionComponent', () => {
       imports: [HttpClientTestingModule, CommonModule, BrowserModule],
       providers: [
         {
-          provide: BooksService,
-          useValue: booksServiceSpy,
+          provide: BooksFacade,
+          useValue: booksFacadeSpy,
         },
       ],
     }).compileComponents();

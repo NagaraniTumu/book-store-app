@@ -19,7 +19,8 @@
     "baseUrl": ".",
     "paths": {
       "@app/shared": ["libs/shared/src/index.ts"],
-      "@app/material-ui": ["libs/material-ui/src/index.ts"]
+      "@app/material-ui": ["libs/material-ui/src/index.ts"],
+      "@app/books": ["libs/books/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

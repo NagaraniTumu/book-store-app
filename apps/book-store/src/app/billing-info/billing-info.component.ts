@@ -12,7 +12,8 @@ import {
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { BillingInfo, Book, BooksService, Collection } from '@app/shared';
+import { BooksFacade } from '@app/books';
+import { BillingInfo, Book, Collection } from '@app/shared';
 
 import {
   BUTTONS,
@@ -40,7 +41,7 @@ export class BillingInfoComponent implements OnInit, OnDestroy {
   public unSubscribe$ = new Subject<void>();
 
   constructor(
-    private _booksService: BooksService,
+    private _booksFacade: BooksFacade,
     private _router: Router,
     public snackBar: MatSnackBar
   ) {}
@@ -48,13 +49,13 @@ export class BillingInfoComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.createBillingInfoForm();
 
-    this._booksService.selectedBook$
+    this._booksFacade.selectedBook$
       .pipe(takeUntil(this.unSubscribe$))
       .subscribe((response: Book) => {
         this.selectedBook = response;
       });
 
-    this._booksService.cartBooks$
+    this._booksFacade.cartBooks$
       .pipe(takeUntil(this.unSubscribe$))
       .subscribe((response: Book[]) => {
         this.cartBooks = response;
@@ -95,35 +96,29 @@ export class BillingInfoComponent implements OnInit, OnDestroy {
   }
 
   public addCartBooksToCollection(): void {
-    const collection: Collection[] = [];
+    const purchasedBooks: Collection[] = [];
 
     this.cartBooks.forEach((item) => {
-      collection.push({
+      purchasedBooks.push({
         bookInfo: item,
         billingInfo: this.getBillingInfo(),
       });
     });
 
-    this._booksService.dispatchBooksToCollection([
-      ...this._booksService.myBookCollection$.getValue(),
-      ...collection,
-    ]);
+    this._booksFacade.dispatchBooksToCollection(purchasedBooks);
 
-    this._booksService.dispatchBooksToCart([]);
+    this._booksFacade.clearCart();
   }
 
   public addSelectedBookToCollection(): void {
-    const collection: Collection = {
+    const purchasedBook: Collection = {
       bookInfo: this.selectedBook,
       billingInfo: this.getBillingInfo(),
     };
 
-    this._booksService.dispatchBooksToCollection([
-      ...this._booksService.myBookCollection$.getValue(),
-      ...[collection],
-    ]);
+    this._booksFacade.dispatchBooksToCollection([purchasedBook]);
 
-    this.removeSelectedBookFromCart();
+    this._booksFacade.removeSelectedBookFromCart(this.selectedBook);
   }
 
   public getBillingInfo(): BillingInfo {
@@ -135,18 +130,6 @@ export class BillingInfoComponent implements OnInit, OnDestroy {
     };
   }
 
-  public removeSelectedBookFromCart(): void {
-    const booksInCart: Book[] = this._booksService.cartBooks$.getValue();
-
-    booksInCart.forEach((item, index) => {
-      if (item.id === this.selectedBook.id) {
-        booksInCart.splice(index, 1);
-      }
-    });
-
-    this._booksService.dispatchBooksToCart(booksInCart);
-  }
-
   public openSnackbar() {
     const horizontalPosition: MatSnackBarHorizontalPosition = 'center';
     const verticalPosition: MatSnackBarVerticalPosition = 'top';
@@ -155,6 +138,7 @@ export class BillingInfoComponent implements OnInit, OnDestroy {
     config.verticalPosition = verticalPosition;
     config.horizontalPosition = horizontalPosition;
     config.duration = 2000;
+    config.panelClass = 'green-snackbar';
 
     this.snackBar.open(PURCHASE_SUCCESS_MSG, undefined, config);
   }

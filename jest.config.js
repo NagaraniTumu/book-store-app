@@ -3,5 +3,6 @@ module.exports = {
     '<rootDir>/apps/book-store',
     '<rootDir>/libs/shared',
     '<rootDir>/libs/material-ui',
+    '<rootDir>/libs/books',
   ],
 };

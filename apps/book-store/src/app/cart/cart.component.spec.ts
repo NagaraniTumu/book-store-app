@@ -6,14 +6,11 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-import { BehaviorSubject } from 'rxjs';
+import { of } from 'rxjs';
 
-import {
-  ArrayToStringPipe,
-  Book,
-  BooksService,
-  EllipsisPipe,
-} from '@app/shared';
+import { BooksFacade } from '@app/books';
+
+import { ArrayToStringPipe, Book, EllipsisPipe } from '@app/shared';
 
 import { CartComponent } from './cart.component';
 
@@ -26,9 +23,9 @@ describe('CartComponent', () => {
 
   const booksData = require('../../assets/books.json');
 
-  const booksServiceSpy = {
-    cartBooks$: new BehaviorSubject([booksData[0], booksData[1]]),
-    dispatchBooksToCart: jest.fn(),
+  const booksFacadeSpy = {
+    cartBooks$: of([booksData[0], booksData[1]]),
+    removeSelectedBookFromCart: jest.fn(),
   };
 
   beforeEach(async () => {
@@ -43,8 +40,8 @@ describe('CartComponent', () => {
       ],
       providers: [
         {
-          provide: BooksService,
-          useValue: booksServiceSpy,
+          provide: BooksFacade,
+          useValue: booksFacadeSpy,
         },
       ],
     }).compileComponents();
@@ -86,7 +83,7 @@ describe('CartComponent', () => {
   });
 
   it('should remove selected book from cart on click of remove icon', () => {
-    booksServiceSpy.cartBooks$.subscribe((cartbooks: Book[]) => {
+    booksFacadeSpy.cartBooks$.subscribe((cartbooks: Book[]) => {
       expect(cartbooks.length).toEqual(2);
     });
 
@@ -94,7 +91,7 @@ describe('CartComponent', () => {
       .nativeElement;
     btnPurchase.click();
 
-    booksServiceSpy.cartBooks$.subscribe((cartBooks: Book[]) => {
+    booksFacadeSpy.cartBooks$.subscribe((cartBooks: Book[]) => {
       expect(cartBooks.length).toEqual(1);
     });
   });
@@ -106,10 +103,7 @@ describe('CartComponent', () => {
       .nativeElement;
     btnPurchase0.click();
 
-    booksServiceSpy.cartBooks$.subscribe((cartBooks: Book[]) => {
-      expect(cartBooks.length).toEqual(0);
-    });
-
+    expect(component.cartBooks.length).toEqual(0);
     expect(routerSpy).toHaveBeenCalledWith([ROUTES.BOOKS_SEARCH]);
   });
 });

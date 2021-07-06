@@ -7,27 +7,24 @@ import { CommonModule } from '@angular/common';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
 
-import { BehaviorSubject, of } from 'rxjs';
+import { of } from 'rxjs';
 
-import { BooksService } from '@app/shared';
+import { BooksFacade } from '@app/books';
 
 import { BooksSearchComponent } from './books-search.component';
 
-fdescribe('BooksSearchComponent', () => {
+describe('BooksSearchComponent', () => {
   let component: BooksSearchComponent;
   let fixture: ComponentFixture<BooksSearchComponent>;
   let router: Router;
 
   const booksData = require('../../assets/books.json');
 
-  const booksServiceSpy = {
-    getBooks: jest.fn(() => of(booksData)),
-    recentSearch$: new BehaviorSubject('angular'),
-    recentSearchResults$: new BehaviorSubject(booksData),
-    selectedBook$: new BehaviorSubject(booksData[0]),
-    dispatchRecentSearch: jest.fn(),
-    dispatchRecentSearchResults: jest.fn(),
-    dispatchSelectedbook: jest.fn(),
+  const booksFacadeSpy = {
+    recentSearch$: of('angular'),
+    allBooks$: of(booksData),
+    dispatchBooks: jest.fn(),
+    dispatchSelectedBookId: jest.fn(),
   };
 
   beforeEach(async () => {
@@ -43,8 +40,8 @@ fdescribe('BooksSearchComponent', () => {
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       providers: [
         {
-          provide: BooksService,
-          useValue: booksServiceSpy,
+          provide: BooksFacade,
+          useValue: booksFacadeSpy,
         },
       ],
     }).compileComponents();
