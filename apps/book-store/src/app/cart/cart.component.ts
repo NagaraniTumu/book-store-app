@@ -43,8 +43,7 @@ export class CartComponent implements OnInit, OnDestroy {
       }
     });
 
-    this._booksService.cartBooks$.next(booksInCart);
-    this._booksService.resetCart$.next();
+    this._booksService.dispatchBooksToCart(booksInCart);
 
     if (booksInCart.length === 0) {
       this._router.navigate([ROUTES.BOOKS_SEARCH]);

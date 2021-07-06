@@ -6,7 +6,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { MaterialUiModule } from '@app/material-ui';
-import { SharedModule, LoggingInterceptor, BooksService } from '@app/shared';
+import {
+  SharedModule,
+  LoggingInterceptor,
+  BooksService,
+} from '@app/shared';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -33,7 +37,7 @@ import { BooksSearchComponent } from './books-search/books-search.component';
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
-    BooksService,
+    BooksService,    
     { provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],

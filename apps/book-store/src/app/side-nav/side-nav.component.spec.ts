@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 import { BooksService } from '@app/shared';
 
@@ -16,8 +16,6 @@ describe('SideNavComponent', () => {
   const booksData = require('../../assets/books.json');
 
   const booksServiceSpy = {
-    resetCart$: new Subject(),
-    resetCollection$: new Subject(),
     cartBooks$: new BehaviorSubject([]),
     myBookCollection$: new BehaviorSubject([]),
   };
@@ -54,18 +52,13 @@ describe('SideNavComponent', () => {
   });
 
   it('should verify books count in cart', () => {
-    booksServiceSpy.cartBooks$ = new BehaviorSubject([booksData[0]]);
-    booksServiceSpy.resetCart$.next();
+    booksServiceSpy.cartBooks$.next([booksData[0]]);
 
     expect(component.cartBooksCount).toEqual(1);
   });
 
   it('should verify books count in collection', () => {
-    booksServiceSpy.myBookCollection$ = new BehaviorSubject([
-      booksData[1],
-      booksData[2],
-    ]);
-    booksServiceSpy.resetCollection$.next();
+    booksServiceSpy.myBookCollection$.next([booksData[1], booksData[2]]);
 
     expect(component.collectionBooksCount).toEqual(2);
   });

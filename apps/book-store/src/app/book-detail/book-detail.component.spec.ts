@@ -5,7 +5,7 @@ import { BrowserModule, By } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { BehaviorSubject, of, Subject } from 'rxjs';
+import { BehaviorSubject, of } from 'rxjs';
 
 import { ArrayToStringPipe, BooksService, EllipsisPipe } from '@app/shared';
 
@@ -22,7 +22,7 @@ describe('BookDetailComponent', () => {
   const booksServiceSpy = {
     selectedBook$: of(booksData[0]),
     cartBooks$: new BehaviorSubject([booksData[1]]),
-    resetCart$: new Subject(),
+    dispatchBooksToCart: jest.fn(),
   };
 
   beforeEach(async () => {
