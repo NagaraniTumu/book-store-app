@@ -3,7 +3,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { Book, BooksService, Collection } from '@app/shared';
+import { BooksFacade } from '@app/books';
+import { Book, Collection } from '@app/shared';
 
 import { SIDE_NAV_LIST_ITEMS } from '../constants/app.constants';
 
@@ -20,16 +21,16 @@ export class SideNavComponent implements OnInit, OnDestroy {
 
   public unSubscribe$ = new Subject<void>();
 
-  constructor(private _booksService: BooksService) {}
+  constructor(private _booksFacade: BooksFacade) {}
 
   ngOnInit(): void {
-    this._booksService.cartBooks$
+    this._booksFacade.cartBooks$
       .pipe(takeUntil(this.unSubscribe$))
       .subscribe((cartBooks: Book[]) => {
         this.cartBooksCount = cartBooks.length;
       });
 
-    this._booksService.myBookCollection$
+    this._booksFacade.collectionBooks$
       .pipe(takeUntil(this.unSubscribe$))
       .subscribe((collection: Collection[]) => {
         this.collectionBooksCount = collection.length;

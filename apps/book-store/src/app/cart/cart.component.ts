@@ -4,7 +4,8 @@ import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { Book, BooksService } from '@app/shared';
+import { BooksFacade } from '@app/books';
+import { Book } from '@app/shared';
 
 import { ROUTES } from '../constants/app.constants';
 import { BUTTONS } from '../constants/template.constants';
@@ -20,10 +21,10 @@ export class CartComponent implements OnInit, OnDestroy {
 
   public unSubscribe$ = new Subject<void>();
 
-  constructor(private _booksService: BooksService, private _router: Router) {}
+  constructor(private _booksFacade: BooksFacade, private _router: Router) {}
 
   ngOnInit(): void {
-    this._booksService.cartBooks$
+    this._booksFacade.cartBooks$
       .pipe(takeUntil(this.unSubscribe$))
       .subscribe((response: Book[]) => {
         this.cartBooks = response;
@@ -34,18 +35,14 @@ export class CartComponent implements OnInit, OnDestroy {
     this._router.navigate([ROUTES.CART_BILLING]);
   }
 
-  public onCartRemove(book: Book) {
-    const booksInCart: Book[] = this._booksService.cartBooks$.getValue();
+  public onCartRemove(selectedBook: Book) {
+    this._booksFacade.removeSelectedBookFromCart(selectedBook);
 
-    booksInCart.forEach((item, index) => {
-      if (item.id === book.id) {
-        booksInCart.splice(index, 1);
-      }
+    this.cartBooks.forEach((item, index) => {
+      if (item.id === selectedBook.id) this.cartBooks.splice(index, 1);
     });
 
-    this._booksService.dispatchBooksToCart(booksInCart);
-
-    if (booksInCart.length === 0) {
+    if (this.cartBooks.length === 0) {
       this._router.navigate([ROUTES.BOOKS_SEARCH]);
     }
   }

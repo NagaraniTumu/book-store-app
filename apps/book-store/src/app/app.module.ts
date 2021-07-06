@@ -5,13 +5,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
 import { MaterialUiModule } from '@app/material-ui';
-import {
-  SharedModule,
-  LoggingInterceptor,
-  BooksService,
-} from '@app/shared';
+import { BooksModule } from '@app/books';
+import { SharedModule, LoggingInterceptor } from '@app/shared';
 import { AppRoutingModule } from './app-routing.module';
+
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
@@ -34,10 +37,22 @@ import { BooksSearchComponent } from './books-search/books-search.component';
     AppRoutingModule,
     SharedModule,
     MaterialUiModule,
+    BooksModule,
+    StoreModule.forRoot(
+      {},
+      {
+        metaReducers: !environment.production ? [] : [],
+        runtimeChecks: {
+          strictActionImmutability: true,
+          strictStateImmutability: true,
+        },
+      }
+    ),
+    EffectsModule.forRoot([]),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
-    BooksService,    
     { provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],

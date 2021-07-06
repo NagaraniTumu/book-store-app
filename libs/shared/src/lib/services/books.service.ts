@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
-import { Book, Collection } from '../models/book.model';
+import { Book } from '../models/book.model';
 
 import { BOOKS_API_URL } from '../constants/api.constants';
 
@@ -12,12 +12,6 @@ import { BOOKS_API_URL } from '../constants/api.constants';
   providedIn: 'root',
 })
 export class BooksService {
-  public recentSearch$ = new BehaviorSubject<string>('');
-  public recentSearchResults$ = new BehaviorSubject<Book[]>([]);
-  public selectedBook$ = new BehaviorSubject<Book>(null);
-  public cartBooks$ = new BehaviorSubject<Book[]>([]);
-  public myBookCollection$ = new BehaviorSubject<Collection[]>([]);
-
   constructor(private httpClient: HttpClient) {}
 
   public getBooks(searchString: string): Observable<Book[]> {
@@ -59,24 +53,5 @@ export class BooksService {
         ? item.saleInfo.retailPrice.currencyCode
         : '',
     }));
-  }
-
-  public dispatchRecentSearch(search: string) {
-    this.recentSearch$.next(search);
-  }
-
-  public dispatchRecentSearchResults(searchResults: Book[]) {
-    this.recentSearchResults$.next(searchResults);
-  }
-
-  public dispatchSelectedbook(book: Book) {
-    this.selectedBook$.next(book);
-  }
-  public dispatchBooksToCart(books: Book[]) {
-    this.cartBooks$.next(books);
-  }
-
-  public dispatchBooksToCollection(collection: Collection[]) {
-    this.myBookCollection$.next(collection);
   }
 }

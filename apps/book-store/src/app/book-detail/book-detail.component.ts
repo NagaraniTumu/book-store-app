@@ -4,7 +4,8 @@ import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { Book, BooksService } from '@app/shared';
+import { BooksFacade } from '@app/books';
+import { Book } from '@app/shared';
 
 import { BUTTONS, LABELS } from '../constants/template.constants';
 import { ROUTES } from '../constants/app.constants';
@@ -21,10 +22,10 @@ export class BookDetailComponent implements OnInit, OnDestroy {
 
   public unSubscribe$ = new Subject<void>();
 
-  constructor(private _booksService: BooksService, private _router: Router) {}
+  constructor(private _booksFacade: BooksFacade, private _router: Router) {}
 
   ngOnInit(): void {
-    this._booksService.selectedBook$
+    this._booksFacade.selectedBook$
       .pipe(takeUntil(this.unSubscribe$))
       .subscribe((selectedBook: Book) => {
         this.selectedBook = selectedBook;
@@ -41,9 +42,8 @@ export class BookDetailComponent implements OnInit, OnDestroy {
     this._router.navigate([ROUTES.CART]);
   }
 
-  public addBooksToCart(book: Book) {
-    const cartBooks = [...this._booksService.cartBooks$.getValue(), ...[book]];
-    this._booksService.dispatchBooksToCart(cartBooks);
+  public addBooksToCart(selectedBook: Book) {
+    this._booksFacade.dispatchBooksToCart(selectedBook);
   }
 
   public onBuy(book: Book) {

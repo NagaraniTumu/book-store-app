@@ -13,9 +13,9 @@ import {
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, of } from 'rxjs';
 
-import { BooksService, Collection } from '@app/shared';
+import { BooksFacade } from '@app/books';
 
 import { BillingInfoComponent } from './billing-info.component';
 
@@ -31,12 +31,13 @@ describe('BillingInfoComponent', () => {
 
   const booksData = require('../../assets/books.json');
 
-  const booksServiceSpy = {
-    selectedBook$: new BehaviorSubject(booksData[0]),
-    cartBooks$: new BehaviorSubject([booksData[0], booksData[1]]),
+  const booksFacadeSpy = {
+    selectedBook$: of(booksData[0]),
+    cartBooks$: of([booksData[0], booksData[1]]),
     myBookCollection$: new BehaviorSubject([]),
     dispatchBooksToCollection: jest.fn(),
-    dispatchBooksToCart: jest.fn(),
+    removeSelectedBookFromCart: jest.fn(),
+    clearCart: jest.fn(),
   };
 
   beforeEach(async () => {
@@ -55,8 +56,8 @@ describe('BillingInfoComponent', () => {
       ],
       providers: [
         {
-          provide: BooksService,
-          useValue: booksServiceSpy,
+          provide: BooksFacade,
+          useValue: booksFacadeSpy,
         },
         {
           provide: Router,
@@ -97,10 +98,6 @@ describe('BillingInfoComponent', () => {
       .nativeElement;
     btnSubmit.click();
 
-    booksServiceSpy.myBookCollection$.subscribe((collection: Collection[]) => {
-      expect(collection.length).toEqual(1);
-    });
-
     const router = TestBed.inject(Router);
     expect(router.navigate).toHaveBeenCalledWith([ROUTES.COLLECTION]);
   });
@@ -119,10 +116,6 @@ describe('BillingInfoComponent', () => {
     const btnSubmit = fixture.debugElement.query(By.css('.btnSubmit'))
       .nativeElement;
     btnSubmit.click();
-
-    booksServiceSpy.myBookCollection$.subscribe((collection: Collection[]) => {
-      expect(collection.length).toEqual(2);
-    });
 
     const router = TestBed.inject(Router);
     expect(router.navigate).toHaveBeenCalledWith([ROUTES.COLLECTION]);

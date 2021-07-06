@@ -7,7 +7,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { BehaviorSubject, of } from 'rxjs';
 
-import { ArrayToStringPipe, BooksService, EllipsisPipe } from '@app/shared';
+import { ArrayToStringPipe, EllipsisPipe } from '@app/shared';
+
+import { BooksFacade } from '@app/books';
 
 import { BookDetailComponent } from './book-detail.component';
 
@@ -19,9 +21,8 @@ describe('BookDetailComponent', () => {
   let router: Router;
 
   const booksData = require('../../assets/books.json');
-  const booksServiceSpy = {
+  const booksFacadeSpy = {
     selectedBook$: of(booksData[0]),
-    cartBooks$: new BehaviorSubject([booksData[1]]),
     dispatchBooksToCart: jest.fn(),
   };
 
@@ -36,8 +37,8 @@ describe('BookDetailComponent', () => {
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       providers: [
         {
-          provide: BooksService,
-          useValue: booksServiceSpy,
+          provide: BooksFacade,
+          useValue: booksFacadeSpy,
         },
       ],
     }).compileComponents();
@@ -75,7 +76,7 @@ describe('BookDetailComponent', () => {
     expect(routerSpy).toHaveBeenCalledWith([ROUTES.DETAIL_BILLING]);
   });
   it('should navigate to books search page when selected book not available', () => {
-    booksServiceSpy.selectedBook$ = new BehaviorSubject(undefined);
+    booksFacadeSpy.selectedBook$ = new BehaviorSubject(undefined);
     const routerSpy = spyOn(router, 'navigate');
     component.ngOnInit();
 
